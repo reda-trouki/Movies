@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Template from '@/components/template';
 import { getMovies } from '@/utils/getMovies';
 import Movie from '@/components/Movie';
+import { Link } from 'expo-router';
 
 const URL = "https://api.themoviedb.org/3/movie/popular"
 
@@ -21,7 +22,7 @@ export default function popular() {
       <View style={{ flex: 1, marginTop:10 }}>
         <ScrollView contentContainerStyle={styles.content}>
           {movies?.map((m) => (
-            <Movie key={m.id} image={m.poster_path} />
+              <Movie key={m.id} id={m.id} image={m.poster_path} />
           ))}
         </ScrollView>
       </View>

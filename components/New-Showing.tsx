@@ -18,7 +18,7 @@ export default function NewShowing() {
     <View style={styles.container}>
         <View style={{width: '100%',padding:10, flexDirection: 'row', justifyContent: 'space-between'}}>
             <Text style={{fontWeight: 'bold', fontSize: 20}}>Now Showing</Text>
-            <Link href={'/upComing'} asChild>
+            <Link href={'/movies/upComing'} asChild>
                 <Pressable style={{ borderWidth: 1, borderColor: 'gray', paddingVertical: 4, paddingHorizontal: 6, borderRadius: 50 }}>
                     <Text style={{ fontSize: 12, color: 'gray' }} >See more</Text>
                 </Pressable>

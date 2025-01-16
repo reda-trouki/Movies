@@ -19,7 +19,7 @@ export default function Popular() {
     <View style={styles.container}>
           <View style={styles.header}>
               <Text style={styles.title}>Popular</Text>
-              <Link href={'/popular'} asChild>
+              <Link href={'/movies/popular'} asChild>
                 <Pressable style={styles.button}>
                   <Text style={{ fontSize: 12, color: 'gray' }} >See more</Text>
                 </Pressable>
