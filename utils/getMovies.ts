@@ -39,11 +39,11 @@ const getMovies = async (limit:number, url:string) =>{
     const movies = await fetchMovies(limit, url);
     const genreList = await fetchGenreList();
     if(movies.length > 0){
-    movies.forEach(movie => {
+      movies.forEach(movie => {
         const genreNames = getGenreNames(movie.genre_ids, genreList);
         movie.genres = genreNames;
-    });
-  }
+      });
+    }
     return movies;
 }
 

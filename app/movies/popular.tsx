@@ -22,7 +22,7 @@ export default function popular() {
       <View style={{ flex: 1, marginTop:10 }}>
         <ScrollView contentContainerStyle={styles.content}>
           {movies?.map((m) => (
-              <Movie key={m.id} id={m.id} image={m.poster_path} />
+            <Movie title='movies' key={m.id} id={m.id} image={m.poster_path} />
           ))}
         </ScrollView>
       </View>

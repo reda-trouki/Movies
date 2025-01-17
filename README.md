@@ -19,9 +19,9 @@ A modern and user-friendly **React Native** mobile application for discovering m
 
 ## Screenshots
 
-| Home Screen | Movies | Tv Shows |
-|-------------|---------------|----------------|
-| <img src="images/movie-app-screen1.png" alt="Home Screen" width="200" /> | <img src="images/movie-app-screen2.png" alt="Movies" width="200" /> | <img src="images/movie-app-screen3.png" alt="tv Shows" width="200" /> |
+| Home Screen | Movies | Tv Shows |Movie Details
+|-------------|---------------|----------------|----------------|
+| <img src="images/movie-app-screen1.png" alt="Home Screen" width="200" /> | <img src="images/movie-app-screen2.png" alt="Movies" width="200" /> | <img src="images/movie-app-screen3.png" alt="tv Shows" width="200" /> | <img src="images/movie-app-screen4.png" alt="Home Screen" width="200" /> |
 
 <!-- | Watchlist | Dark Mode | Light Mode |
 |-----------|-----------|------------|
