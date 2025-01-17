@@ -1,5 +1,5 @@
 
-const TMDB_API_KEY = '';
+const TMDB_API_KEY = '3e91b6da9d348b6440a9ae7a1ac362d5';
 const genreurl = `https://api.themoviedb.org/3/genre/movie/list?api_key=${TMDB_API_KEY}`;
 
 const fetchMovies = async (limit:number, url:string) =>{
@@ -7,7 +7,9 @@ const fetchMovies = async (limit:number, url:string) =>{
     if(limit != -1){
         await fetch(`${url}?api_key=${TMDB_API_KEY}`)
       .then(response => response.json())
-      .then(data => movies = data.results.slice(0, limit))
+      .then(data => {
+        limit != 1 ? movies = data.results.slice(0, limit): movies = data;
+      })
       .catch(error => console.error('Error:', error));
     }else{
         await fetch(`${url}?api_key=${TMDB_API_KEY}`)
@@ -36,11 +38,12 @@ const getGenreNames = (genreIds:number[], genreList) => {
 const getMovies = async (limit:number, url:string) =>{
     const movies = await fetchMovies(limit, url);
     const genreList = await fetchGenreList();
-
+    if(movies.length > 0){
     movies.forEach(movie => {
         const genreNames = getGenreNames(movie.genre_ids, genreList);
         movie.genres = genreNames;
     });
+  }
     return movies;
 }
 

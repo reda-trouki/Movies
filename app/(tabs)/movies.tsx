@@ -22,7 +22,7 @@ export default function Movies() {
             <View style={{flex:1}}>
             <ScrollView contentContainerStyle={styles.content}>
                 {movies?.map((m) => (
-                    <Movie key={m.id} image={m.poster_path} />
+                    <Movie title='movies' id={m.id} key={m.id} image={m.poster_path} />
                 ))}
             </ScrollView>
             </View>

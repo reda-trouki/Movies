@@ -30,6 +30,7 @@ export default function NewShowing() {
           data={movies}
           keyExtractor={(item) => item?.id.toString()}
             renderItem={({ item }) => (
+                <Link key={item.id} href={`/movies/${item.id}`} style={{marginRight:10}}>
                 <View style={styles.movie}>
                   <View style={styles.imgcontainer}>
                     <Image source={{ uri: `https://image.tmdb.org/t/p/w500${item?.poster_path}` }} style={styles.movieImg} />
@@ -39,7 +40,8 @@ export default function NewShowing() {
                     <Ionicons name='star' size={14} color={'gold'} />
                         <Text style={{ fontSize: 12, color: 'gray' }}>{item?.vote_average}/10 IMDB</Text>
                     </View>
-              </View>
+                </View>
+                </Link>
           )}
         />
     }

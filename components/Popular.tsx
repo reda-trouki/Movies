@@ -2,7 +2,7 @@ import { View, Text, Pressable, StyleSheet, Image } from 'react-native'
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
 import { getMovies } from '@/utils/getMovies';
-import { Link } from 'expo-router';
+import { Link, router } from 'expo-router';
 
 const URL = "https://api.themoviedb.org/3/movie/popular"
 
@@ -30,10 +30,10 @@ export default function Popular() {
             {/* Movie List */}
             {movies?.map((movie, index) => {
               return (
-                <View key={movie.id} style={styles.movieContainer}>
-                  <View style={{width: '40%'}}>
+                  <View key={movie.id} style={styles.movieContainer}>
+                  <Pressable onPress={()=>router.navigate(`/movies/${movie.id}`)} style={{width: '40%'}}>
                     <Image source={{ uri: `https://image.tmdb.org/t/p/w500${movie.poster_path}`}} style={styles.movieImage} />
-                  </View>
+                  </Pressable>
                   <View style={{ width: '60%', gap:10 }}>
                     <Text style={{ fontWeight: 'bold', fontSize: 16 }}>{movie.title}</Text>
                     <Text style={styles.rating}>
