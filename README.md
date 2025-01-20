@@ -35,5 +35,5 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/movie-app.git
+   git clone https://github.com/reda-trouki/Movies.git
    cd movie-app
