@@ -12,7 +12,7 @@ export default function popular() {
   const [movies, setMovies] = React.useState([]);
 
   React.useEffect(() => {
-    getMovies(-1, URL).then((data) => {
+    getMovies(-1, URL, 'movies').then((data) => {
       setMovies(data);
     });
   }, []);
@@ -22,7 +22,7 @@ export default function popular() {
       <View style={{ flex: 1, marginTop:10 }}>
         <ScrollView contentContainerStyle={styles.content}>
           {movies?.map((m) => (
-            <Movie title='movies' key={m.id} id={m.id} image={m.poster_path} />
+            <Movie type='movies' key={m.id} id={m.id} image={m.poster_path} />
           ))}
         </ScrollView>
       </View>

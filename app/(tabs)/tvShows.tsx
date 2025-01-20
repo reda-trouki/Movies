@@ -22,7 +22,7 @@ export default function tvShows() {
             <View style={{ flex: 1 }}>
                 <ScrollView contentContainerStyle={styles.content}>
                     {movies?.map((m) => (
-                        <Movie title='tv' id={m.id} key={m.id} image={m.poster_path} />
+                        <Movie type='tv' id={m.id} key={m.id} image={m.poster_path} />
                     ))}
                 </ScrollView>
             </View>

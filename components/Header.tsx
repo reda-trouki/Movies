@@ -17,13 +17,12 @@ export default function Header({title}:{title: string}) {
 
 const styles = StyleSheet.create({
     container:{
+        flex: 0.1,
         width: '100%',
-        flex: 0.05,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: 10,
-        marginVertical: 10,
     },
     notifications: {
         position: 'absolute',

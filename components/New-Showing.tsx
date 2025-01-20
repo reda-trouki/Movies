@@ -10,7 +10,7 @@ export default function NewShowing() {
     const [movies, setMovies] = React.useState([]);
 
     React.useEffect(() => {
-        getMovies(5, URL).then((data) => {
+        getMovies(5, URL, 'movies').then((data) => {
             setMovies(data);
         });
     },[])

@@ -5,12 +5,12 @@ import { Link } from 'expo-router';
 interface MovieProps {
   image: string;
   id: number;
-  title: string;
+  type: string;
 }
 
-export default function Movie({ image, id, title }: MovieProps) {
+export default function Movie({ image, id, type }: MovieProps) {
   // Determine the link based on the title
-  const link = title === 'tv' ? `/series/${id}` : `/movies/${id}`;
+  const link = type === 'tv' ? `/series/${id}` : `/movies/${id}`;
 
   return (
     <Link

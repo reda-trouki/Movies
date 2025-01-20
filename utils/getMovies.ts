@@ -1,6 +1,6 @@
+import { fetchMovieGenres, fetchTVGenres } from "./getGenres";
 
-const TMDB_API_KEY = '';
-const genreurl = `https://api.themoviedb.org/3/genre/movie/list?api_key=${TMDB_API_KEY}`;
+const TMDB_API_KEY = '3e91b6da9d348b6440a9ae7a1ac362d5';
 
 const fetchMovies = async (limit:number, url:string) =>{
     let movies = []
@@ -20,12 +20,7 @@ const fetchMovies = async (limit:number, url:string) =>{
     return movies;
 }
 
-// Step 2: Fetch genre list
-const fetchGenreList = async () => {
-  const response = await fetch(genreurl);
-  const data = await response.json();
-  return data.genres; // Returns an array of genre objects { id, name }
-};
+
 
 // Step 3: Map genre IDs to genre names
 const getGenreNames = (genreIds:number[], genreList) => {
@@ -35,9 +30,9 @@ const getGenreNames = (genreIds:number[], genreList) => {
   });
 };
 
-const getMovies = async (limit:number, url:string) =>{
+const getMovies = async (limit:number, url:string, type: string) =>{
     const movies = await fetchMovies(limit, url);
-    const genreList = await fetchGenreList();
+    const genreList = type === 'tv'? await fetchTVGenres() : await fetchMovieGenres();
     if(movies.length > 0){
       movies.forEach(movie => {
         const genreNames = getGenreNames(movie.genre_ids, genreList);
@@ -47,4 +42,4 @@ const getMovies = async (limit:number, url:string) =>{
     return movies;
 }
 
-export { getMovies};
+export { getMovies };

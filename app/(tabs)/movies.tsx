@@ -11,7 +11,7 @@ export default function Movies() {
     const [movies, setMovies] = React.useState([]);
 
     React.useEffect(() => {
-        getMovies(-1, URL).then((data) => {
+        getMovies(-1, URL, 'movies').then((data) => {
             setMovies(data);
         });
     }, []);
@@ -22,7 +22,7 @@ export default function Movies() {
             <View style={{flex:1}}>
             <ScrollView contentContainerStyle={styles.content}>
                 {movies?.map((m) => (
-                    <Movie title='movies' id={m.id} key={m.id} image={m.poster_path} />
+                    <Movie type='movies' id={m.id} key={m.id} image={m.poster_path} />
                 ))}
             </ScrollView>
             </View>
