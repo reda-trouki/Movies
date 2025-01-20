@@ -1,6 +1,6 @@
 # Movie App
 
-<img src="images/logo.png" alt="App Logo" width="200" /> <!-- Add your app logo here -->
+<img src="assets/images/movies-logo.png" alt="App Logo" width="200" /> <!-- Add your app logo here -->
 
 A modern and user-friendly **React Native** mobile application for discovering movies, TV shows, and more, powered by the [TMDB API](https://www.themoviedb.org/documentation/api). Built with [Expo](https://expo.dev) for seamless development and deployment.
 
