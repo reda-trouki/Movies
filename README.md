@@ -120,7 +120,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 ## Contact
 
-Reda Trouki - [@reda_trouki](www.linkedin.com/in/reda-trouki)
+Reda Trouki - [@reda_trouki](https://www.linkedin.com/in/reda-trouki)
 
 Project Link: [https://github.com/reda-trouki/Movies](https://github.com/reda-trouki/Movies)
 
