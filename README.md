@@ -24,7 +24,7 @@ A modern and user-friendly **React Native** mobile application for discovering m
 | <img src="images/movie-app-screen1.png" alt="Home Screen" width="200" /> | <img src="images/movie-app-screen2.png" alt="Movies" width="200" /> | <img src="images/movie-app-screen3.png" alt="tv Shows" width="200" /> | <img src="images/movie-app-screen4.png" alt="Home Screen" width="200" /> |
 
 | search | Dark Mode |
-|-----------|-----------|------------|
+|-----------|-----------|
 | <img src="images/movie-app-screen5.png" alt="Watchlist" width="200" /> | <img src="images/dark_mode.png" alt="Dark Mode" width="200" /> |
 
 ---
