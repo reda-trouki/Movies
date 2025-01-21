@@ -5,7 +5,6 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/movies-logo.png",
-    "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -35,7 +34,8 @@
       ]
     ],
     "experiments": {
-      "typedRoutes": true
-    }
+      "typedRoutes": true,
+    },
+    "scheme": "myapp"
   }
 }

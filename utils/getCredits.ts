@@ -1,9 +1,13 @@
-const TMDB_API_KEY = '3e91b6da9d348b6440a9ae7a1ac362d5';
+import Constants from 'expo-constants';
+
+const { tmdbKey } = Constants.expoConfig.extra;
 
 
 export const getCredits = async (url: string): Promise<any[]> => {
+
+
   try {
-    const response = await fetch(`${url}?api_key=${TMDB_API_KEY}`);
+    const response = await fetch(`${url}?api_key=${tmdbKey}`);
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }

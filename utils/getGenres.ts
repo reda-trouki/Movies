@@ -1,9 +1,12 @@
+import Constants from "expo-constants";
+
 // utils/getMovies.js
-const API_KEY = '3e91b6da9d348b6440a9ae7a1ac362d5'; // Replace with your TMDB API key
+const { tmdbKey } = Constants.expoConfig.extra;// Replace with your TMDB API key
 
 export const fetchMovieGenres = async () => {
+
   const response = await fetch(
-    `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`
+    `https://api.themoviedb.org/3/genre/movie/list?api_key=${tmdbKey}`
   );
   if (!response.ok) {
     throw new Error('Failed to fetch movie genres');
@@ -14,7 +17,7 @@ export const fetchMovieGenres = async () => {
 
 export const fetchTVGenres = async () => {
   const response = await fetch(
-    `https://api.themoviedb.org/3/genre/tv/list?api_key=${API_KEY}`
+    `https://api.themoviedb.org/3/genre/tv/list?api_key=${tmdbKey}`
   );
   if (!response.ok) {
     throw new Error('Failed to fetch TV genres');

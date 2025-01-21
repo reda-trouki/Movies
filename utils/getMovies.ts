@@ -1,18 +1,19 @@
+import Constants from "expo-constants";
 import { fetchMovieGenres, fetchTVGenres } from "./getGenres";
 
-const TMDB_API_KEY = '3e91b6da9d348b6440a9ae7a1ac362d5';
+const { tmdbKey } = Constants.expoConfig.extra;
 
 const fetchMovies = async (limit:number, url:string) =>{
     let movies = []
     if(limit != -1){
-        await fetch(`${url}?api_key=${TMDB_API_KEY}`)
+        await fetch(`${url}?api_key=${tmdbKey}`)
       .then(response => response.json())
       .then(data => {
         limit != 1 ? movies = data.results.slice(0, limit): movies = data;
       })
       .catch(error => console.error('Error:', error));
     }else{
-        await fetch(`${url}?api_key=${TMDB_API_KEY}`)
+        await fetch(`${url}?api_key=${tmdbKey}`)
         .then(response => response.json())
         .then(data => movies = data.results)
         .catch(error => console.error('Error:', error));
