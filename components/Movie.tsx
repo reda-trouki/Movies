@@ -27,7 +27,7 @@ export default function Movie({ image, id, type }: MovieProps) {
 
 const styles = StyleSheet.create({
   container: {
-    width: 105,
+    width: 106,
     height: 150,
     borderRadius: 10,
     marginRight: 5,

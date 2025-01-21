@@ -1,6 +1,6 @@
-const API_KEY = ''; // Replace with your TMDB API key
+const API_KEY = '3e91b6da9d348b6440a9ae7a1ac362d5'; // Replace with your TMDB API key
 
-// Fetch movies by genre
+// Fetch movies by3e91b6da9d348b6440a9ae7a1ac362d5 genre
 export const getMoviesByGenre = async (genreId) => {
   try {
     const response = await fetch(

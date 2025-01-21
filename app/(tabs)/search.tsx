@@ -170,7 +170,7 @@ const Search = () => {
 const styles = StyleSheet.create({
   contentContainer: {
     flex: 1,
-    paddingHorizontal: 4,
+    paddingHorizontal: 3,
   },
   keyboardView: {
     flex: 1,
@@ -241,9 +241,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   content: {
+    flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
     paddingHorizontal: 10,
   },
 });

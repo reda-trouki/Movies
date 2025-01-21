@@ -1,4 +1,4 @@
-const TMDB_API_KEY = '';
+const TMDB_API_KEY = '3e91b6da9d348b6440a9ae7a1ac362d5';
 
 
 export const getCredits = async (url: string): Promise<any[]> => {
