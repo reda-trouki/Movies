@@ -6,6 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import BackButton from '@/components/BackButton';
 import { getCredits } from '@/utils/getCredits';
 import Credit from '@/components/Credit';
+
 const URL = 'https://api.themoviedb.org/3/movie';
 
 export default function MovieDetails() {
@@ -19,7 +20,7 @@ export default function MovieDetails() {
     const fetchMovieDetails = async () => {
       try {
         // Fetch a single movie by its ID
-        const data = await getMovies(1, `${URL}/${id}`);
+        const data = await getMovies(1, `${URL}/${id}`, "movie");
         if (data) {
           setMovie(data); // Since getMovies returns an array, take the first item
         } else {

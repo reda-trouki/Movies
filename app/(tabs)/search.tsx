@@ -241,7 +241,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   content: {
-    flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
     paddingHorizontal: 10,
